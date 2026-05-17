@@ -12,6 +12,17 @@ Every subsection follows the same structure: **(1) Model download**, **(2) Data 
 
 > Wan-backbone training lives in [`training_wan.md`](training_wan.md). Quick Start / inference commands live in the main [README](README.md).
 
+First install:
+
+```bash
+conda create -n minwm python=3.10 -y 
+conda activate minwm
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
+export PYTHONPATH="$PWD/HY15:$PWD/Wan21:$PWD/shared:$PYTHONPATH"
+```
+
+
 ---
 
 ## 1. HY Action2V
