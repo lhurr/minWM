@@ -2,7 +2,7 @@
 
 >  ***A full-stack framework and tutorial for newcomers, rather than a specific model.***
 
-**minWM** is our contribution to the world-model community: a **full-stack open-source framework** that walks you end-to-end through turning a bidirectional T2V foundation model into an action-conditioned video world model — with example data, runnable scripts, Claude skills capturing our hands-on experience, and onboarding knowledge for newcomers. We hope more researchers and developers join us in growing the community together.
+**minWM** is our contribution to the world-model community: a **full-stack open-source framework** that walks you end-to-end through turning a bidirectional T2V foundation model into an action-conditioned video world model — with example data, runnable scripts, **Claude skills** capturing our hands-on experience, and **onboarding knowledge** for newcomers. We hope more researchers and developers join us in growing the community together.
 
 ## 🎬 Demo
 
