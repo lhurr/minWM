@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/74d1f157-66a7-4f88-9f57-d76382ef55c2
 > Join our **WeChat group** to discuss, ask questions, and get help from the team.
 
 <p align="center">
-  <img src="assets/wechat.png" width="220">
+  <img src="assets/wechat.jpg" width="220">
 </p>
 
 ## 📋 Table of Contents
