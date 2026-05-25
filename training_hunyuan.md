@@ -127,7 +127,7 @@ Final layout:
 Bidirectional + camera (ProPE) training. Model class `HunyuanTransformer3DARActionProPEModel`, camera dataloader carrying viewmats/Ks, flow matching MSE loss:
 
 ```bash
-bash HY15/scripts/training/hyvideo15/run_bi_camera_multinode.sh
+bash HY15/scripts/training/hy15_camera/run_bi_camera_multinode.sh
 ```
 
 By default the script writes ckpts to `./ckpts/HY15/Action2V/bidirectional/checkpoint-XXXX/transformer/`. After training, pick the best step and promote the entire `transformer/` contents (`diffusion_pytorch_model.safetensors` + `config.json` etc.) to `./ckpts/HY15/Action2V/bidirectional/`, matching the predownload layout used in §1.2 Stage 1 (1):
@@ -405,7 +405,7 @@ Set `USE_DISCRETE_ACTION=True` and point `AR_ACTION_LOAD_FROM_DIR` to the downlo
 # Phase 1: Bidirectional camera + discrete action (for testing/debugging only)
 USE_DISCRETE_ACTION=True \
 AR_ACTION_LOAD_FROM_DIR=./ckpts/HY-WorldPlay/bidirectional_model/diffusion_pytorch_model.safetensors \
-    bash HY15/scripts/training/hyvideo15/run_bi_camera_multinode.sh
+    bash HY15/scripts/training/hy15_camera/run_bi_camera_multinode.sh
 
 # Phase 2 Stage 1: AR teacher forcing + discrete action
 USE_DISCRETE_ACTION=True \
