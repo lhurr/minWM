@@ -6,7 +6,7 @@
 
 ## 🎬 Demo
 
-https://github.com/user-attachments/assets/74d1f157-66a7-4f88-9f57-d76382ef55c2
+https://github.com/user-attachments/assets/99c25915-7fe7-4a20-a2c4-9d291502fccf
 
 ## 🔥 News
 
