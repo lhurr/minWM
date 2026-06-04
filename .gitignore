@@ -173,5 +173,6 @@ preencoded/
 data/
 *mp4
 .safetensors
-dataset
-Wan21/wan_models
+.claude
+kb_launch.sh
+Wan21_prope_ref/
