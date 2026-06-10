@@ -41,17 +41,17 @@ def main():
     config.wandb_save_dir = args.wandb_save_dir
     config.disable_wandb = args.disable_wandb
 
-    # Check effective batch size >= 32
+    # Check effective batch size >= 16
     total_gpus = int(os.environ.get("WORLD_SIZE", 1))
     dp = total_gpus // config.sp_size
     ga = getattr(config, "grad_accum_steps", 1)
     bsz = dp * ga
     if int(os.environ.get("RANK", 0)) == 0:
         print(f"[BSZ Check] gpus={total_gpus}, dp={dp}, effective_bsz={bsz}")
-        assert bsz >= 32, (
-            f"effective_bsz={bsz} < 32. Suggest: "
-            f"--sp_size 1 with grad_accum_steps >= {math.ceil(32 / total_gpus)}, "
-            f"or keep --sp_size {config.sp_size} with grad_accum_steps >= {math.ceil(32 / dp)}"
+        assert bsz >= 16, (
+            f"effective_bsz={bsz} < 16. Suggest: "
+            f"--sp_size 1 with grad_accum_steps >= {math.ceil(16 / total_gpus)}, "
+            f"or keep --sp_size {config.sp_size} with grad_accum_steps >= {math.ceil(16 / dp)}"
         )
 
     if config.trainer == "diffusion":
