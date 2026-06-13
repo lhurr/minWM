@@ -128,7 +128,7 @@ Intended audience: graduate students, independent researchers, and junior labs t
 ## 🛠️ Installation
 
 ```bash
-srun --time=02:00:00 --gpus=h200-141 --cpus-per-task=8 --mem=32G --pty bash
+srun --time=02:00:00 --gpus=h200-141 --cpus-per-task=8 --mem=96G --pty bash
 conda create -n minwm python=3.10 -y 
 conda activate minwm
 pip install -r requirements.txt
