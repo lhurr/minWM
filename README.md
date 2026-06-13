@@ -22,21 +22,28 @@ https://github.com/user-attachments/assets/99c25915-7fe7-4a20-a2c4-9d291502fccf
 
 ## 📋 Table of Contents
 
-- [🎬 Demo](#-demo)
-- [🔥 News](#-news)
-- [✨ Why minWM?](#-why-minwm)
-  - [1. Full-Stack Framework](#1-full-stack-framework)
-  - [2. Multi-Backbone Support](#2-multi-backbone-support)
-  - [3. Multi-Condition Injection](#3-multi-condition-injection)
-  - [4. Claude Skills — Modify the Framework with an LLM Assistant](#4-claude-skills--modify-the-framework-with-an-llm-assistant)
-  - [5. Onboarding Knowledge — for Newcomers to World Models](#5-onboarding-knowledge--for-newcomers-to-world-models)
-- [🛠️ Installation](#️-installation)
-- [🧱 Model Checkpoints](#-model-checkpoints)
-- [🚀 Quick Start](#-quick-start)
-- [⚙️ Data & Training & Reproduction](#️-data--training--reproduction)
-- [📚 Citation](#-citation)
-- [Contact](#contact)
-- [🙏 Acknowledgements](#-acknowledgements)
+- [🌍 minWM: Full-Stack Open-Source Video World Model Framework](#-minwm-full-stack-open-source-video-world-model-framework)
+  - [🎬 Demo](#-demo)
+  - [🔥 News](#-news)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [✨ Why minWM?](#-why-minwm)
+    - [1. Full-Stack Framework](#1-full-stack-framework)
+    - [2. Multi-Backbone Support](#2-multi-backbone-support)
+      - [2.1 From Scratch: Bidirectional T2V Foundation → Real-Time World Model](#21-from-scratch-bidirectional-t2v-foundation--real-time-world-model)
+      - [2.2 Finetuning an Existing Video World Model 🚧 \[TBD\]](#22-finetuning-an-existing-video-world-model--tbd)
+    - [3. Multi-Condition Injection](#3-multi-condition-injection)
+      - [3.1 Supported Conditions](#31-supported-conditions)
+      - [3.2 Supported Injection Methods](#32-supported-injection-methods)
+    - [4. Claude Skills — Modify the Framework with an LLM Assistant](#4-claude-skills--modify-the-framework-with-an-llm-assistant)
+    - [5. Onboarding Knowledge — for Newcomers to World Models](#5-onboarding-knowledge--for-newcomers-to-world-models)
+  - [🛠️ Installation](#️-installation)
+  - [🚀 Quick Start](#-quick-start)
+    - [1. Download the demo checkpoints](#1-download-the-demo-checkpoints)
+    - [2. Run the three demos](#2-run-the-three-demos)
+  - [⚙️ Data \& Training \& Reproduction](#️-data--training--reproduction)
+  - [📚 Citation](#-citation)
+  - [Contact](#contact)
+  - [🙏 Acknowledgements](#-acknowledgements)
 
 ## ✨ Why minWM?
 
@@ -121,10 +128,11 @@ Intended audience: graduate students, independent researchers, and junior labs t
 ## 🛠️ Installation
 
 ```bash
+srun --time=02:00:00 --gpus=h200-141 --cpus-per-task=8 --mem=32G --pty bash
 conda create -n minwm python=3.10 -y 
 conda activate minwm
 pip install -r requirements.txt
-pip install flash-attn --no-build-isolation
+pip install https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.9.0/flash_attn-2.8.3+cu128torch2.9-cp310-cp310-linux_x86_64.whl
 export PYTHONPATH="$PWD/HY15:$PWD/Wan21:$PWD/shared:$PYTHONPATH"
 ```
 
